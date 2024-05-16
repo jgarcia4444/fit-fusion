@@ -1,21 +1,29 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Dimensions } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import Home from '../../screens/Home';
+import Lifts from '../../screens/Lifts';
 
 const Tabs = () => {
 
+    const Tab = createBottomTabNavigator();
+
     return (
-        <View style={[styles.tabContainer]}>
-            <Text style={styles.tabText}>Hola</Text>
-        </View>
+        <Tab.Navigator initialRouteName='Home'>
+            <Tab.Screen name="Home" component={Home}/>
+            <Tab.Screen name="Lifts" component={Lifts}/>
+        </Tab.Navigator>
     )
 };
+
+const height = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     tabContainer: {
         width: '100%',
-        backgroundColor: "#444",
         color: "#fff",
-        paddingVertical: 12,
+        marginBottom: height * 0.05
     },
     tabText: {
         color: "#fff",
