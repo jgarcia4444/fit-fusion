@@ -1,12 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import AddLiftButton from '../components/buttons/AddLiftButton';
 
 const Home = () => {
 
     return (
-        <View>
+        <SafeAreaView>
             <Text>Home Screen</Text>
-        </View>
+            <AddLiftButton />
+        </SafeAreaView>
     )
 };
 

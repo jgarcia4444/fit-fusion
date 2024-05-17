@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
 
 const Lifts = () => {
 
     return (
-        <View>
+        <SafeAreaView>
             <Text>Lifts Screen</Text>
-        </View>
+        </SafeAreaView>
     )
 }
 

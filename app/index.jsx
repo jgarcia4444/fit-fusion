@@ -2,11 +2,13 @@ import { StyleSheet, Text, View, Dimensions, } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 
 import Tabs from "../components/navigation/tabs";
+import AddLiftButton from "../components/buttons/AddLiftButton";
 
 export default function Page() {
   return (
     <NavigationContainer independent={true}>
       <View style={styles.container}>
+        <AddLiftButton />
         <Tabs />
       </View>
     </NavigationContainer>
@@ -21,7 +23,6 @@ const styles = StyleSheet.create({
     height: height,
     width: width,
     backgroundColor: "#000",
-    justifyContent: 'flex-end',
     position: 'absolute',
     top: 0,
   },
