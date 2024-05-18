@@ -1,13 +1,13 @@
 import React from 'react';
 import {SafeAreaView, Text, StyleSheet} from 'react-native';
-import AddLiftButton from '../components/buttons/AddLiftButton';
+
+import Greeting from '../components/home/greeting';
 
 const Home = () => {
 
     return (
         <SafeAreaView>
-            <Text>Home Screen</Text>
-            <AddLiftButton />
+            <Greeting />
         </SafeAreaView>
     )
 };

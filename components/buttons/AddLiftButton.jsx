@@ -1,6 +1,6 @@
 import { Feather } from '@expo/vector-icons';
 import React from 'react';
-import {View, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 const AddLiftButton = () => {
 
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         padding: 4,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        shadowOpacity: 0,
     },
 })
 
