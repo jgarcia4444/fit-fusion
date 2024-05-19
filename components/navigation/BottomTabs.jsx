@@ -6,9 +6,13 @@ import { Feather } from '@expo/vector-icons';
 import Home from '../../screens/Home';
 import Lifts from '../../screens/Lifts';
 
-const Tabs = () => {
+const BottomTabs = () => {
 
     const Tab = createBottomTabNavigator();
+    // tabBarActiveTintColor: "#fff",
+    // tabBarInactiveTintColor: "#fff",
+    // tabBarActiveBackgroundColor: "#000",
+    // tabBarInactiveBackgroundColor: "#000",
 
     return (
         <Tab.Navigator
@@ -18,7 +22,7 @@ const Tabs = () => {
                 tabBarActiveTintColor: "#fff",
                 tabBarInactiveTintColor: "#ccc",
                 tabBarActiveBackgroundColor: "#000",
-                tabBarInactiveBackgroundColor: "#333",
+                tabBarInactiveBackgroundColor: "#222",
                 headerShown: false,
             }}
         >
@@ -27,7 +31,6 @@ const Tabs = () => {
                 component={Home}
                 options={{
                     tabBarIcon: ({size, focused, color}) => (<Feather name="home" size={28} color={color} />),
-                    tabBarShowLabel: false,
                 }}
             />
             <Tab.Screen 
@@ -47,4 +50,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Tabs;
+export default BottomTabs;

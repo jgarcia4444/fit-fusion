@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View, Dimensions, } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 
-import Tabs from "../components/navigation/tabs";
 import AddLiftButton from "../components/buttons/AddLiftButton";
+import BottomTabs from "../components/navigation/BottomTabs";
 
 export default function Page() {
   return (
     <NavigationContainer independent={true}>
       <View style={styles.container}>
         <AddLiftButton />
-        <Tabs />
+        <BottomTabs />
       </View>
     </NavigationContainer>
   );
