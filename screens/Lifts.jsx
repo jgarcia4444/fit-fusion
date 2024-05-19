@@ -8,7 +8,7 @@ const Lifts = () => {
     const {sharedLayout} = Styles;
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.liftScreenContainer}>
             <View style={[sharedLayout]}>
                 <Text>Lifts Screen</Text>
             </View>
@@ -19,6 +19,8 @@ const Lifts = () => {
 
 const styles = StyleSheet.create({
     liftScreenContainer: {
+        height: '100%',
+        width: "100%",
     }
 })
 
