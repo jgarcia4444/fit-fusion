@@ -1,7 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, Text, } from 'react-native';
 
+import { Styles } from '../../constants/Styles';
+import HomeSectionText from '../text/HomeSectionText';
+
 const Greeting = () => {
+
+    const {homeDetailsContainer} = Styles;
 
     const dynamicTimeGreeting = () => {
         let today = new Date();
@@ -24,8 +29,8 @@ const Greeting = () => {
     }
 
     return (
-        <View style={styles.greetingContainer}>
-            <Text style={styles.greetingText}>{dynamicTimeGreeting()}</Text>
+        <View style={[homeDetailsContainer, styles.greetingContainer]}>
+            <HomeSectionText content={dynamicTimeGreeting()} customStyles={styles.greetingText} />
             <Text style={styles.motivationText}>{motivationText()}</Text>
         </View>
     )
@@ -37,12 +42,10 @@ const styles = StyleSheet.create({
         textAlign: 'left',
     },
     greetingText: {
-        fontSize: 32,
         borderBottomColor: '#000',
         borderBottomWidth: 2,
         borderBottomEndRadius: 3,
-        borderBottomStartRadius: 3,
-        fontFamily: 'serif'
+        borderBottomStartRadius: 3,       
     },
     motivationText: {
         fontSize: 20,
