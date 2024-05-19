@@ -9,16 +9,20 @@ import Lifts from '../../screens/Lifts';
 const Tabs = () => {
 
     const Tab = createBottomTabNavigator();
+    // tabBarActiveTintColor: "#fff",
+    // tabBarInactiveTintColor: "#fff",
+    // tabBarActiveBackgroundColor: "#000",
+    // tabBarInactiveBackgroundColor: "#000",
 
     return (
         <Tab.Navigator
             initialRouteName='Home'
             screenOptions={{
                 tabBarShowLabel: false,
-                tabBarActiveTintColor: "#fff",
-                tabBarInactiveTintColor: "#ccc",
-                tabBarActiveBackgroundColor: "#000",
-                tabBarInactiveBackgroundColor: "#333",
+                tabBarStyle: {
+
+                    tabBarActiveTintColor: "#000",
+                },
                 headerShown: false,
             }}
         >
@@ -26,8 +30,7 @@ const Tabs = () => {
                 name="Home" 
                 component={Home}
                 options={{
-                    tabBarIcon: ({size, focused, color}) => (<Feather name="home" size={28} color={color} />),
-                    tabBarShowLabel: false,
+                    tabBarIcon: ({size, focused, color}) => (<Feather name="home" size={28} color={"color"} />),
                 }}
             />
             <Tab.Screen 
