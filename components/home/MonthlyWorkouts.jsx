@@ -9,14 +9,15 @@ const MonthlyWorkouts = () => {
     const {homeDetailsContainer} = Styles;
 
     return (
-        <View style={[homeDetailsContainer,]}>
+        <View style={[homeDetailsContainer, styles.motivationContainer]}>
             <HomeSectionText content={"X amount of workouts this month."} />
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-
+    motivationContainer: {
+    }
 })
 
 export default MonthlyWorkouts

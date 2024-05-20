@@ -5,6 +5,7 @@ import { Styles } from '../constants/Styles';
 
 import Greeting from '../components/home/greeting';
 import MonthlyWorkouts from '../components/home/MonthlyWorkouts';
+import LatestWorkout from '../components/home/LatestWorkout/LatestWorkout';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
             <View style={[sharedLayout, styles.innerContainer]}>
                 <Greeting />
                 <MonthlyWorkouts />
+                <LatestWorkout />
             </View>
         </SafeAreaView>
     )
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     innerContainer: {
-        gap: 20,
+        gap: 40,
     }
 })
 
