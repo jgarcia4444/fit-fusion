@@ -55,34 +55,71 @@ const LastWorkoutOverview = () => {
         const lifts = [
             {liftName: "Bench Press (barbell)", sets: [
                 {suppossedReps: 12, repsCompleted: 12, weight: 135},
-                  
-            ]}
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+            ]},
         ]
         return lifts.map((info, i) => <OverviewLift key={`${i}-${info.liftName}`} info={info} />)
     }
 
     const displayLastWorkout = () => {
         return showDetails === true && (
-            <ScrollView horizontal={true}>
+            <ScrollView style={styles.liftScrollView} horizontal={true}>
                 {renderLifts()}
             </ScrollView>
         )
     }
 
     return (
-        <View style={[styles.overviewRow]}>
-            {renderOverviewSections()}
-            <Animated.View style={{transform: [{rotate: chevronRotateDegree}]}}>
-                <TouchableOpacity onPress={handlePress}>
-                    <Feather name="chevron-down" size={28} color={'black'} />
-                </TouchableOpacity>
-            </Animated.View>
+        <View>
+            <View style={[styles.overviewRow]}>
+                {renderOverviewSections()}
+                <Animated.View style={{transform: [{rotate: chevronRotateDegree}]}}>
+                    <TouchableOpacity onPress={handlePress}>
+                        <Feather name="chevron-down" size={28} color={'black'} />
+                    </TouchableOpacity>
+                </Animated.View>
+            </View>
             {displayLastWorkout()}
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+    liftScrollView: {
+        marginVertical: 20,
+    },
     overviewRow: {
         flexDirection: 'row',
         gap: 20,
