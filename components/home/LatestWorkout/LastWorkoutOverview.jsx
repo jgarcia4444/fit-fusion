@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react'
-import { View, StyleSheet, Text, Animated, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, Animated, TouchableOpacity, ScrollView } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 
 import OverviewSection from './overviewSection/overviewSection';
+import OverviewLift from './OverviewLift/OverviewLift';
 
 const LastWorkoutOverview = () => {
 
@@ -10,6 +11,7 @@ const LastWorkoutOverview = () => {
     const [showDetails, setShowDetails] = useState(false);
 
     const overviewValues = [
+        {sectionLabel: "Name", sectionValue: "Chest & Tri's"},
         {sectionLabel: "# of Lifts", sectionValue: "6"},
         {sectionLabel: "Reps Completed", sectionValue: "216"},
     ];
@@ -49,6 +51,24 @@ const LastWorkoutOverview = () => {
         }
     }
 
+    const renderLifts = () => {
+        const lifts = [
+            {liftName: "Bench Press (barbell)", sets: [
+                {suppossedReps: 12, repsCompleted: 12, weight: 135},
+                  
+            ]}
+        ]
+        return lifts.map((info, i) => <OverviewLift key={`${i}-${info.liftName}`} info={info} />)
+    }
+
+    const displayLastWorkout = () => {
+        return showDetails === true && (
+            <ScrollView horizontal={true}>
+                {renderLifts()}
+            </ScrollView>
+        )
+    }
+
     return (
         <View style={[styles.overviewRow]}>
             {renderOverviewSections()}
@@ -57,6 +77,7 @@ const LastWorkoutOverview = () => {
                     <Feather name="chevron-down" size={28} color={'black'} />
                 </TouchableOpacity>
             </Animated.View>
+            {displayLastWorkout()}
         </View>
     )
 }
@@ -64,7 +85,7 @@ const LastWorkoutOverview = () => {
 const styles = StyleSheet.create({
     overviewRow: {
         flexDirection: 'row',
-        gap: 40,
+        gap: 20,
     }
 });
 

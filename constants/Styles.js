@@ -11,6 +11,7 @@ export const Styles = {
     },
     overviewLabel: {
         fontWeight: "bold",
+        fontSize: 10,
     },
     overviewValue: {
         fontWeight: 100,
