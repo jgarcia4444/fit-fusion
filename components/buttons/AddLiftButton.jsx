@@ -7,7 +7,7 @@ const AddLiftButton = () => {
     return (
         <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.buttonTouchContainer}>
-                <Feather style={{zIndex: 10}} name='plus-circle' size={28} color={'black'} />
+                <Feather style={{zIndex: 10}} name='plus-circle' size={32} color={'black'} />
             </TouchableOpacity>
         </View>
     )
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         shadowOpacity: 0,
-        zIndex: 10
+        zIndex: 10,
+        shadowOpacity: 0,
     },
 })
 

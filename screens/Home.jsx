@@ -6,6 +6,7 @@ import { Styles } from '../constants/Styles';
 import Greeting from '../components/home/greeting';
 import MonthlyWorkouts from '../components/home/MonthlyWorkouts';
 import LatestWorkout from '../components/home/LatestWorkout/LatestWorkout';
+import AddLiftButton from '../components/buttons/AddLiftButton.jsx'
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
                 <MonthlyWorkouts />
                 <LatestWorkout />
             </View>
+            <AddLiftButton />
         </SafeAreaView>
     )
 };

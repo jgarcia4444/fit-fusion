@@ -24,6 +24,12 @@ const BottomTabs = () => {
                 tabBarActiveBackgroundColor: "#000",
                 tabBarInactiveBackgroundColor: "#222",
                 headerShown: false,
+                tabBarStyle: {
+                    zIndex: -10,
+                }
+            }}
+            sceneContainerStyle={{
+                backgroundColor: "#fff"
             }}
         >
             <Tab.Screen
@@ -37,7 +43,7 @@ const BottomTabs = () => {
                 name="Lifts" 
                 component={Lifts}
                 options={{
-                    tabBarIcon: ({size, focused, color}) => <Feather color={color} size={28} name="user" />
+                    tabBarIcon: ({size, focused, color}) => <Feather color={color} size={28} name="folder" />
                 }}
             />
         </Tab.Navigator>

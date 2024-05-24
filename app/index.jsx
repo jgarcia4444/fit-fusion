@@ -1,15 +1,26 @@
 import { StyleSheet, Text, View, Dimensions, } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import AddLiftButton from "../components/buttons/AddLiftButton";
 import BottomTabs from "../components/navigation/BottomTabs";
+import Account from "../screens/Account";
+
 
 export default function Page() {
+
+  const Stack = createStackNavigator()
+
   return (
     <NavigationContainer independent={true}>
       <View style={styles.container}>
-        <AddLiftButton />
-        <BottomTabs />
+        <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+        >
+          <Stack.Screen name="Main" component={BottomTabs} />
+          <Stack.Screen name="Account" component={Account} />
+        </Stack.Navigator>
       </View>
     </NavigationContainer>
   );
