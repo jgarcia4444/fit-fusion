@@ -5,11 +5,24 @@ const OverviewLift = ({info}) => {
 
     const {liftName, sets} = info;
 
+    const dynamicBackgroundColor = (index) => {
+        var bgColor = 'transparent';
+        var paddingValue = 0;
+        if (index % 2 !== 0) { 
+            bgColor = '#ddd';
+            paddingValue = 4;
+        }
+        return {
+            backgroundColor: bgColor,
+            padding: paddingValue,
+        };
+    }
+
     const renderSets = () => {
         return sets.map((info, i) => {
             const {suppossedReps, repsCompleted, weight} = info;
             return (
-                <View style={styles.setRow} key={`${i}-${info.weight}`}>
+                <View style={[styles.setRow, dynamicBackgroundColor(i)]} key={`${i}-${info.weight}`}>
                     <View style={styles.setCol}>
                         <Text style={styles.detailsLabel}>Reps Predicted</Text>
                         <Text>{suppossedReps}</Text>
@@ -26,6 +39,8 @@ const OverviewLift = ({info}) => {
             )
         })
     }
+
+
 
     return (
         <View style={styles.overviewLiftContainer}>
@@ -72,6 +87,7 @@ const styles = StyleSheet.create({
     setRow: {
         flexDirection: 'row',
         marginBottom: 10,
+        borderRadius: 5,
     }
 })
 

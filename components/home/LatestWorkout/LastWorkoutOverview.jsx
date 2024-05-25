@@ -90,7 +90,7 @@ const LastWorkoutOverview = () => {
                 {suppossedReps: 12, repsCompleted: 12, weight: 135},
             ]},
         ]
-        return lifts.map((info, i) => <OverviewLift key={`${i}-${info.liftName}`} info={info} />)
+        return lifts.map((info, i) => <OverviewLift index={i} key={`${i}-${info.liftName}`} info={info} />)
     }
 
     const displayLastWorkout = () => {
