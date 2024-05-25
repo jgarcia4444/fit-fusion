@@ -1,9 +1,11 @@
 
 export const Styles = {
     homeDetailsContainer: {
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        backgroundColor: "rgba(0, 0, 0, 0.05)",
         borderRadius: 10,
         padding: '4%',
+        borderWidth: 2,
+        borderColor: '#000'
     },
     homeSectionText: {
         fontSize: 32,
