@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabs from "../components/navigation/BottomTabs";
 import Account from "../screens/Account";
+import AddLiftButton from "../components/buttons/AddLiftButton";
 
 
 export default function Page() {
@@ -13,6 +14,7 @@ export default function Page() {
   return (
     <NavigationContainer independent={true}>
       <View style={styles.container}>
+        <AddLiftButton />
         <Stack.Navigator
         screenOptions={{
           headerShown: false

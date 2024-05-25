@@ -119,6 +119,9 @@ const LastWorkoutOverview = () => {
 const styles = StyleSheet.create({
     liftScrollView: {
         marginVertical: 20,
+        padding: 5,
+        borderRadius: 5,
+        backgroundColor: '#fff',
     },
     overviewRow: {
         flexDirection: 'row',

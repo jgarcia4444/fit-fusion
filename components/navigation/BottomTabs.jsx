@@ -16,6 +16,7 @@ const BottomTabs = () => {
 
     return (
         <Tab.Navigator
+            // tabBar={props => <BottomTabBar {...props} />}
             initialRouteName='Home'
             screenOptions={{
                 tabBarShowLabel: false,
@@ -29,7 +30,7 @@ const BottomTabs = () => {
                 }
             }}
             sceneContainerStyle={{
-                backgroundColor: "#fff"
+                backgroundColor: "#fff",
             }}
         >
             <Tab.Screen

@@ -19,7 +19,6 @@ const Home = () => {
                 <MonthlyWorkouts />
                 <LatestWorkout />
             </View>
-            <AddLiftButton />
         </SafeAreaView>
     )
 };

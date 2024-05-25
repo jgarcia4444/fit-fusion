@@ -54,18 +54,17 @@ const styles = StyleSheet.create({
     },
     overviewLiftContainer: {
         backgroundColor: "#fff",
-        marginEnd: 20,
         borderRadius: 8,
         width: 250,
         padding: 10,
-        marginBottom: 10,
+        margin: 10,
         shadowColor: "#000",
-        shadowRadius: 7,
+        shadowRadius: 6,
         shadowOffset: {
-            height: 5, 
-            width: 5
+            height: 3, 
+            width: 0
         },
-        shadowOpacity: 0.7
+        shadowOpacity: 0.75
     },
     setCol: {
 
