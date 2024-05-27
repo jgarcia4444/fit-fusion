@@ -11,13 +11,19 @@ const AccountButton = () => {
             </TouchableOpacity>
         </View>
     )
-}
+} 
 
 const styles = StyleSheet.create({
     buttonContainer: {
         padding: 10,
         backgroundColor: "#000",
-        borderRadius: '50%',
+        borderRadius: '100%',
+        shadowRadius: 6,
+        shadowOpacity: 0.75,
+        shadowOffset: {
+            height: 3,
+            width: 0,
+        }
     },
     buttonRow: {
         alignItems: 'flex-end',
