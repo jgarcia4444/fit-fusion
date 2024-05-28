@@ -1,13 +1,22 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+
+import PageHeader from '../components/text/PageHeader';
 
 const Account = () => {
     
     return (
-        <View>
-            <Text>Account</Text>
+        <View style={styles.accountScreen}>
+            <PageHeader header={"Account"} />
         </View>
     )
-}
+};
+
+const styles = StyleSheet.create({
+    accountScreen: {
+        backgroundColor: '#fff',
+        flex: 1,
+    }
+})
 
 export default Account

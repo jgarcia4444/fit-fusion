@@ -7,6 +7,7 @@ import Greeting from '../components/home/greeting';
 import MonthlyWorkouts from '../components/home/MonthlyWorkouts';
 import LatestWorkout from '../components/home/LatestWorkout/LatestWorkout';
 import AddLiftButton from '../components/buttons/AddLiftButton.jsx'
+import AccountButton from '../components/buttons/AccountButton.jsx';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
     return (
         <SafeAreaView style={styles.homeScreenContainer}>
             <View style={[sharedLayout, styles.innerContainer]}>
+                <AccountButton />
                 <Greeting />
                 <MonthlyWorkouts />
                 <LatestWorkout />

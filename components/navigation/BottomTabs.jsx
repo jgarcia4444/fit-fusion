@@ -9,14 +9,9 @@ import Lifts from '../../screens/Lifts';
 const BottomTabs = () => {
 
     const Tab = createBottomTabNavigator();
-    // tabBarActiveTintColor: "#fff",
-    // tabBarInactiveTintColor: "#fff",
-    // tabBarActiveBackgroundColor: "#000",
-    // tabBarInactiveBackgroundColor: "#000",
 
     return (
         <Tab.Navigator
-            // tabBar={props => <BottomTabBar {...props} />}
             initialRouteName='Home'
             screenOptions={{
                 tabBarShowLabel: false,
