@@ -31,17 +31,11 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: "#000",
         borderRadius: '100%',
-        shadowRadius: 4,
-        shadowOpacity: 0.75,
-        shadowOffset: {
-            height: 3,
-            width: 0,
-        },
     },
     buttonRow: {
         alignItems: 'flex-end',
         width: '100%',
-        backgroundColor: "#fff",
+        backgroundColor: "transparent",
         paddingVertical: '2%',
         paddingEnd: "2%"
     }

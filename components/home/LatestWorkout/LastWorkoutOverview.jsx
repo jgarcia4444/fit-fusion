@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         padding: 5,
         borderRadius: 5,
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
     },
     overviewRow: {
         flexDirection: 'row',

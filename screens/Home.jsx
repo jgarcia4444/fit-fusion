@@ -1,13 +1,13 @@
 import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, View, Text, StyleSheet, ScrollView} from 'react-native';
 
 import { Styles } from '../constants/Styles';
 
 import Greeting from '../components/home/greeting';
 import MonthlyWorkouts from '../components/home/MonthlyWorkouts';
 import LatestWorkout from '../components/home/LatestWorkout/LatestWorkout';
-import AddLiftButton from '../components/buttons/AddLiftButton.jsx'
 import AccountButton from '../components/buttons/AccountButton.jsx';
+import BackgroundGradient from '../shared/background/BackgroundGradient.jsx';
 
 const Home = () => {
 
@@ -15,12 +15,14 @@ const Home = () => {
 
     return (
         <SafeAreaView style={styles.homeScreenContainer}>
-            <View style={[sharedLayout, styles.innerContainer]}>
-                <AccountButton />
-                <Greeting />
-                <MonthlyWorkouts />
-                <LatestWorkout />
-            </View>
+            <BackgroundGradient>
+                <ScrollView contentContainerStyle={[sharedLayout, styles.innerContainer]}>
+                    <AccountButton />
+                    <Greeting />
+                    <MonthlyWorkouts />
+                    <LatestWorkout />
+                </ScrollView>
+            </BackgroundGradient>
         </SafeAreaView>
     )
 };

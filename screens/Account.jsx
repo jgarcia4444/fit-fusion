@@ -14,7 +14,6 @@ const Account = () => {
 
 const styles = StyleSheet.create({
     accountScreen: {
-        backgroundColor: '#fff',
         flex: 1,
     }
 })

@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, } from 'react-native';
 
 import { Styles } from '../../constants/Styles';
 import HomeSectionText from '../text/HomeSectionText';
+import BackgroundGradient from '../../shared/background/BackgroundGradient';
 
 const Greeting = () => {
 

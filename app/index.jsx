@@ -7,6 +7,7 @@ import BottomTabs from "../components/navigation/BottomTabs";
 import Account from "../screens/Account";
 import AddLiftButton from "../components/buttons/AddLiftButton";
 import AccountButton from "../components/buttons/AccountButton";
+import BackgroundGradient from "../shared/background/BackgroundGradient";
 
 
 export default function Page() {
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
   container: {
     height: height,
     width: width,
-    backgroundColor: "#000",
     position: 'absolute',
     top: 0,
   },

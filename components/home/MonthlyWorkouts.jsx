@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import { Styles } from '../../constants/Styles';
 import HomeSectionText from '../text/HomeSectionText';
+import BackgroundGradient from '../../shared/background/BackgroundGradient';
 
 const MonthlyWorkouts = () => {
 
