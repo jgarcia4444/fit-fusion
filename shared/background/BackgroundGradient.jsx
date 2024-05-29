@@ -6,7 +6,7 @@ const BackgroundGradient = ({children, customStyle}) => {
 
     return (
         <LinearGradient 
-            colors={["#aaa", "#ddd", "#aaa"]}
+            colors={["#333", "#bbb", "#fff", "#fff", "#bbb", "#333"]}
             style={[styles.container, customStyle]}
         >
             {children}

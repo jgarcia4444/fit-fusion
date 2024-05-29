@@ -3,6 +3,7 @@ import {SafeAreaView, Text, StyleSheet, View} from 'react-native';
 
 import { Styles } from '../constants/Styles';
 import AccountButton from '../components/buttons/AccountButton';
+import BackgroundGradient from '../shared/background/BackgroundGradient';
 
 const Lifts = () => {
 
@@ -10,10 +11,12 @@ const Lifts = () => {
 
     return (
         <SafeAreaView style={styles.liftScreenContainer}>
-            <View style={[sharedLayout]}>
-                <AccountButton />
-                <Text>Lifts Screen</Text>
-            </View>
+            <BackgroundGradient>
+                <View style={[sharedLayout]}>
+                    <AccountButton />
+                    <Text>Lifts Screen</Text>
+                </View>
+            </BackgroundGradient>
         </SafeAreaView>
     )
 }

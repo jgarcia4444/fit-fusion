@@ -7,14 +7,11 @@ const OverviewLift = ({info}) => {
 
     const dynamicBackgroundColor = (index) => {
         var bgColor = 'transparent';
-        var paddingValue = 0;
         if (index % 2 !== 0) { 
-            bgColor = '#ddd';
-            paddingValue = 4;
+            bgColor = 'rgba(255,255,255,0.25)';
         }
         return {
             backgroundColor: bgColor,
-            padding: paddingValue,
         };
     }
 
@@ -68,26 +65,22 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     overviewLiftContainer: {
-        backgroundColor: "#fff",
-        borderRadius: 8,
-        width: 250,
-        padding: 10,
+        borderRadius: 10,
+        borderColor: '#000',
+        borderWidth: 2,
+        width: 275,
+        height: 150,
+        paddingHorizontal: 10,
         margin: 10,
-        shadowColor: "#000",
-        shadowRadius: 6,
-        shadowOffset: {
-            height: 3, 
-            width: 0
-        },
-        shadowOpacity: 0.75
     },
     setCol: {
 
     },
     setRow: {
         flexDirection: 'row',
-        marginBottom: 10,
+        marginBottom: 5,
         borderRadius: 5,
+        padding: 2,
     }
 })
 
